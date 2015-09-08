@@ -24,7 +24,11 @@ app.service('mainService', function($http) {
   ];
 
   this.getUsers = function() {
-    return data;
+    //return data;
+    return $http({
+        method:'GET',
+        url:'http://reqr.es/api/users?page=2'
+    });
   };
 
 
